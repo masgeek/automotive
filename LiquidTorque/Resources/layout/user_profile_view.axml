@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/appBackground"
+      android:layout_weight="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <ImageView
+          android:id="@+id/header_cover_image"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/main_logo" />
+      <!--<ImageButton
+                android:id="@+id/user_profile_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/header_cover_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-60dp"
+                android:background="@color/fullyTransparent"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_user_profile" />
+                -->
+      <RelativeLayout
+          android:id="@+id/profile_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/header_cover_image"
+          android:background="@color/primaryDark"
+          android:elevation="4dp"
+          android:paddingTop="5dp">
+        android:paddingBottom="24dp">
+        <ImageView
+            android:id="@+id/user_profile_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_user_profile" />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/user_profile_photo"
+            android:id="@+id/btnEditProfile"
+            android:src="@drawable/ic_icon_edit"
+            android:background="@color/fullyTransparent"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:text="Username here"
+            android:textColor="@color/ltyellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/user_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="Country name here"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+      </RelativeLayout>
+      <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/profile_text"
+          android:layout_below="@+id/profile_layout"
+          android:layout_marginTop="5dp"
+          android:orientation="vertical">
+        <!-- text label and view block -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/labelColor"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/firstname"
+            android:id="@+id/lblFirstName"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ltyellow"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/firstname"
+            android:id="@+id/firstName" />
+        <!-- End text label and view -->
+        <!-- text label and view block -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/labelColor"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/lastname"
+            android:id="@+id/lblLastName"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ltyellow"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/lastname"
+            android:id="@+id/lastName" />
+        <!-- End text label and view -->
+        <!-- text label and view block -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/labelColor"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/company"
+            android:id="@+id/lblCompanyName"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ltyellow"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/company"
+            android:id="@+id/companyName"
+            android:visibility="visible" />
+        <!-- End text label and view -->
+        <!-- text label and view block -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/labelColor"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/address"
+            android:id="@+id/lblAddress"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ltyellow"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/address"
+            android:id="@+id/address"
+            android:visibility="visible" />
+        <!-- End text label and view -->
+        <!-- text label and view block -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/labelColor"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/city"
+            android:id="@+id/lblCity"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ltyellow"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/city"
+            android:id="@+id/city"
+            android:visibility="visible" />
+        <!-- End text label and view -->
+        <!-- text label and view block -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/labelColor"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/country"
+            android:id="@+id/lblCountry"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ltyellow"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/country"
+            android:id="@+id/country"
+            android:visibility="visible" />
+        <!-- End text label and view -->
+        <!-- text label and view block -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/labelColor"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/email"
+            android:id="@+id/lblEmail"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ltyellow"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/email"
+            android:id="@+id/email"
+            android:visibility="visible" />
+        <!-- End text label and view -->
+        <!-- text label and view block -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/labelColor"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/phone"
+            android:id="@+id/lblPhone"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/ltyellow"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:text="@string/phone"
+            android:id="@+id/phone"
+            android:visibility="visible" />
+        <!-- End text label and view -->
+      </LinearLayout>
+      <LinearLayout
+          android:orientation="horizontal"
+          android:minWidth="25px"
+          android:minHeight="25px"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/socialBar"
+          android:background="@color/colorAccent"
+          android:layout_below="@+id/profile_text"
+          android:layout_weight="0">
+        <!--...Put your bottom bar content here...-->
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_facebook"
+            android:background="@color/fullyTransparent"
+            android:id="@+id/btnFacebook" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_twitter"
+            android:background="@color/fullyTransparent"
+            android:id="@+id/btnTwitter" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_instagram"
+            android:background="@color/fullyTransparent"
+            android:id="@+id/btnInstagram" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_linkedin"
+            android:background="@color/fullyTransparent"
+            android:id="@+id/btnLinkedin" />
+      </LinearLayout>
+    </RelativeLayout>
+  </ScrollView>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:minWidth="10px"
+      android:minHeight="10px"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/bottomBar"
+      android:background="@color/appBackground"
+      android:layout_weight="0">
+    <!--...Put your bottom bar content here...-->
+    <Button
+        android:text="@string/autofolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:id="@+id/btnAutoFolio"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/ltyellow"
+            />
+    <Button
+        android:text="@string/requests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:id="@+id/btnRequests"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@color/ltyellow"
+            />
+  </LinearLayout>
+</LinearLayout>

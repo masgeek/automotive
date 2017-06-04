@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+  <ScrollView
+      android:id="@+id/MainForm"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="5dip"
+          android:text="Account Owner"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          android:textColor="@color/primaryDark" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtCompanyName"
+          android:layout_marginTop="10dip"
+          android:hint="Company name"
+          android:background="@color/inputColor" />
+      <EditText
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtAddress"
+          android:layout_marginTop="10dip"
+          android:hint="Address"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtEmail"
+          android:layout_marginTop="10dip"
+          android:inputType="textEmailAddress"
+          android:hint="Email address"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtConfirmEmail"
+          android:layout_marginTop="10dip"
+          android:inputType="textEmailAddress"
+          android:hint="Confirm your email"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtPhoneNumber"
+          android:layout_marginTop="10dip"
+          android:hint="Mobile Phone e.g +18321234567"
+          android:inputType="phone"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtZipCode"
+          android:layout_marginTop="10dip"
+          android:hint="Zip/Postal code"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtFirstName"
+          android:layout_marginTop="10dip"
+          android:hint="First Name"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtLastName"
+          android:layout_marginTop="10dip"
+          android:hint="Last Name"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtCountry"
+          android:layout_marginTop="10dip"
+          android:hint="Country"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtUsername"
+          android:layout_marginTop="10dip"
+          android:hint="Username"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/txtPassword"
+          android:layout_marginTop="10dip"
+          android:inputType="textPassword"
+          android:hint="Enter Password"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:id="@+id/txtConfirmPassword"
+          android:layout_marginTop="10dip"
+          android:inputType="textPassword"
+          android:hint="Confirm your password"
+          android:background="@color/inputColor" />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:text="1"
+          android:id="@+id/txtNoOfDevices"
+          android:layout_marginTop="10dip"
+          android:hint="Number of devices"
+          android:background="@color/inputColor" />
+      <!-- wrap this in another layout-->
+      <ImageView
+          android:src="@android:drawable/ic_menu_gallery"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:id="@+id/licenseImageView" />
+      <GridLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:rowCount="2"
+          android:columnCount="1">
+        <Button
+            android:id="@+id/btnPickImage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick License Image" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:id="@+id/txtLicense"
+            android:layout_marginTop="10dip"
+            android:hint="Add license"
+            android:background="@color/inputColor" />
+      </GridLayout>
+      <!--End of image picking-->
+    </LinearLayout>
+  </ScrollView>
+</RelativeLayout>

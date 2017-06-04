@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+    <ScrollView
+        android:id="@+id/ListingForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <TextView
+                android:text="Car Listing Details"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <TextView
+                android:text="Make"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/make_spinner"
+                android:spinnerMode="dialog"
+                android:prompt="@string/make_prompt" />
+            <TextView
+                android:text="Model"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/model_spinner"
+                android:spinnerMode="dialog"
+                android:prompt="@string/model_prompt" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:id="@+id/txtModelVariation"
+                android:layout_marginTop="10dip"
+                android:hint="Model Variation"
+                android:inputType="text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:background="@color/inputColor" />
+            <TextView
+                android:text="Year"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/year_spinner"
+                android:spinnerMode="dialog"
+                android:entries="@array/year" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:id="@+id/txtMileage"
+                android:layout_marginTop="10dip"
+                android:hint="Mileage"
+                android:inputType="number"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:background="@color/inputColor" />
+            <TextView
+                android:text="Distance Units"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/distance_spinner"
+                android:spinnerMode="dialog"
+                android:entries="@array/distance" />
+            <TextView
+                android:text="Engine"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/engine_spinner"
+                android:spinnerMode="dialog"
+                android:entries="@array/engine" />
+            <TextView
+                android:text="DriveTrain"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/drivetrain_spinner"
+                android:spinnerMode="dialog"
+                android:entries="@array/drivetrain" />
+            <TextView
+                android:text="Transmission"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/transmission_spinner"
+                android:spinnerMode="dialog"
+                android:entries="@array/transmission" />
+            <TextView
+                android:text="Car Type"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/cartype_spinner"
+                android:spinnerMode="dialog"
+                android:entries="@array/car_type" />
+            <TextView
+                android:text="Exterior Color"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/extclor_spinner"
+                android:spinnerMode="dialog"
+                android:entries="@array/car_color" />
+            <TextView
+                android:text="Interior Color"
+                android:layout_marginTop="10dip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryDark" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:background="@color/inputColor"
+                android:id="@+id/intcolor_spinner"
+                android:spinnerMode="dialog"
+                android:entries="@array/car_color" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:id="@+id/txtVin"
+                android:layout_marginTop="10dip"
+                android:hint="VIN"
+                android:inputType="text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:background="@color/inputColor" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:id="@+id/txtStockNo"
+                android:layout_marginTop="10dip"
+                android:hint="Stock Number."
+                android:inputType="text"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:background="@color/inputColor" />
+        <!-- VAT and POR checkboxes -->
+            <CheckBox
+                android:text="@string/vat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkVat"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="15sp"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_theme" />
+            <CheckBox
+                android:text="@string/por"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkPor"
+                android:layout_below="@id/chkVat"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="15sp"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_theme" />
+        <!-- end of VAT and POR checkboxes -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:id="@+id/txtListPrice"
+                android:layout_marginTop="10dip"
+                android:hint="List Price"
+                android:inputType="numberDecimal"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:background="@color/inputColor" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:inputType="textMultiLine"
+                android:id="@+id/txtDescription"
+                android:layout_marginTop="10dip"
+                android:hint="Add a description here"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:background="@color/inputColor" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.0.4-rc1</version>
+    <title>WizarDroid.NET</title>
+    <authors>Ananth Racherla</authors>
+    <owners>Ananth Racherla</owners>
+	<projectUrl>https://github.com/walkingtree/WizarDroid.Net</projectUrl>
+    <licenseUrl>https://github.com/walkingtree/WizarDroid.Net/blob/master/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WizarDroid.NET is a lightweight library that makes it easy to implement wizards in Xamarin.Android applications.</description>
+    <releaseNotes>- Fixed the issue with the ViewPager getting slammed due to premature Step Completion events.  
+    - Added a Customer wizard sample project to illustrate the use of serialization to persist complex types.  
+    </releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>Xamarin.Android</tags>
+    <dependencies>
+      <dependency id="Xamarin.Android.Support.v4" version="23.0.1.0-rc2" />
+      <dependency id="Newtonsoft.Json" version="7.0.1" />
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="bin\Release\WizarDroid.NET.dll" target="lib\MonoAndroid44" />
+   </files>  
+</package>

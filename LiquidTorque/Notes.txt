@@ -1,0 +1,29 @@
+﻿Devloper console id
+
+ID: liquid-torque-android 
+Project no: 717700953958
+API: AIzaSyDKP1WBkniRYEp3dmC3Ii2gXZ4PUQg0YPg
+SENDER ID: 717700953958
+analytics id: UA-41696752-2
+
+
+            //register hockey crash reporting
+            //CrashManager.Register(this, HOCKEY_APP_ID);
+
+            // UpdateManager.Register(this, HOCKEY_APP_ID);
+            // Initialize the Trace Writer  
+            // Initialize the Trace Writer  
+
+            // Register the MetricsManager for Logging
+            //MetricsManager.Register(this, Application, HOCKEY_APP_ID);
+            //MetricsManager.EnableUserMetrics();
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar_layout">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </android.support.design.widget.AppBarLayout>

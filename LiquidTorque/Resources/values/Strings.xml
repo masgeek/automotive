@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Liquid Torque</string>
+  <string name="drawer_open">Open</string>
+  <string name="drawer_close">Close</string>
+  <string name="menu_refresh">Refresh</string>
+
+  <!-- labels to identify fragments -->
+  <string name="my_profile">You are on My Profile view</string>
+  <string name="my_inventory">You are on My Inventory View</string>
+  <string name="my_requests">You are on My Requests View</string>
+  <string name="settings">You are on Settings view</string>
+  <string name="help">You are on Help View</string>
+  <string name="signout">You are on Signout view</string>
+  <!-- end of label to identify fragments -->
+
+
+  <string name="terms_text">I acknowledge that i have read and agree with the terms and conditions</string>
+  <string name="accept_terms">Accept</string>
+  <string name="terms">Terms and Conditions</string>
+
+  <!--Prompt messages-->
+  <string name="description">No desciption provided</string>
+  <string name="make_prompt">Select A Make</string>
+  <string name="model_prompt">Select A Model</string>
+  <string name="drivetrain_prompt">Select Drivetrain</string>
+  <string name="engine_prompt">Select Engine</string>
+  <string name="transmission_prompt">Select Transmission</string>
+  <string name="car_type_prompt">Select Car Type</string>
+  <string name="car_color_prompt">Select Car Color</string>
+  <string name="year_prompt">Select year</string>
+  <string name="distance_prompt">Select Miles/Kilometers</string>
+  <string name="account_type_prompt">Choose Account Type</string>
+
+  <!-- Label string for various interfaces -->
+
+  <!-- checkbox labels -->
+  <string name="vat">VAT</string>
+  <string name="por">Price On Request</string>
+
+  <string name="price">$599,000.00</string>
+  <string name="specs">Specs</string>
+  <string name="make">Make</string>
+  <string name="model">Model</string>
+  <string name="model_variation">Model variation</string>
+  <string name="year">Year</string>
+  <string name="drivetrain">Drivetrain</string>
+  <string name="engine">Engine</string>
+  <string name="transmission">Transmission</string>
+  <string name="mileage">Mileage</string>
+  <string name="vin">Vin</string>
+  <string name="stock_no">Stock #</string>
+  <string name="ext_color">Ext. Color</string>
+  <string name="int_color">Int. Color</string>
+  <string name="owner">Owner</string>
+  <string name="message_owner">Message Owner</string>
+  <string name="vehicle_images">Show vehicle images</string>
+
+  <!-- user profile lables -->
+  <string name="firstname">First Name</string>
+  <string name="lastname">Last Name</string>
+  <string name="email">Email</string>
+  <string name="phone">Phone</string>
+  <string name="location">City</string>
+  <string name="company">Company Name</string>
+  <string name="address">Address</string>
+  <string name="city">City</string>
+  <string name="country">Country</string>
+  <string name="autofolio">Auto Folio</string>
+  <string name="requests">Requests</string>
+
+  <!-- Socal media -->
+  <string name="social">Social Media</string>
+  <string name="facebook">Facebook username</string>
+  <string name="linkedin">LinkedIn username</string>
+  <string name="twitter">Twitter username</string>
+  <string name="instagram">Instagram</string>
+  <string name="tumblr">Tumblr username</string>
+
+  <!-- codes -->
+  <string name="invitationcode">Enter invitation code</string>
+
+  <!-- Instructions -->
+  <string name="uploadinstructions">You can upload up-to a maximum of 25 images at once.</string>
+  <string name="chooseimageinstructions">Select photos from the gallery</string>
+
+  <string name="assistance">For any assistance please email us at:</string>
+  <string name="helpmail">contact@liquidtorque.com</string>
+  <string name="filteroptions">Filter Options</string>
+
+  <!-- messaging bit -->
+  <string name="message_hint">Say anything</string>
+  <string name="send">Send</string>
+  <string name="profile_me">My Profile Pic</string>
+  <string name="profile_other">Other profile pic</string>
+</resources>

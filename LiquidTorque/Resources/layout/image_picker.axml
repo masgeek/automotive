@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:layout_margin="10dp"
+      android:orientation="vertical"
+      android:id="@+id/linearLayout">
+    <Button
+        android:id="@+id/btnImagePicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chooseimageinstructions"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/uploadinstructions"
+        android:id="@+id/uploadInstructions"
+        android:textColor="@color/ltyellow"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp" />
+    <!-- Image preview section -->
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/login_text" />
+  </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- keystore signing -->
+  <!--<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>D:\Development\ANDROID\keystores\alpha_keys_new.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>andalite6</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>LT</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>andalite6</AndroidSigningKeyPass>
+  </PropertyGroup>
+  -->
+  <!-- end of keystore signing -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0393D583-541C-43B7-8693-ABD7B6548E6F}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>liquidtorque</RootNamespace>
+    <AssemblyName>liquidtorque</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+    <MandroidI18n />
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>None.None.DateStamp.DayOfYearStamp</AssemblyVersionSettings>
+    <AssemblyFileVersionSettings>None.None.DateStamp.DayOfYearStamp</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>None.None.DateStamp.DayOfYearStamp</AssemblyInfoVersionSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings />
+    <AssemblyFileVersionSettings />
+    <AssemblyInfoVersionSettings />
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <Debugger>Xamarin</Debugger>
+    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>None.None.None.IncrementOnDemand</AssemblyVersionSettings>
+    <AssemblyFileVersionSettings>None.None.None.IncrementOnDemand</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>None.DayStamp.MonthStamp.DayOfYearStamp</AssemblyInfoVersionSettings>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <Debugger>Xamarin</Debugger>
+    <AotAssemblies>False</AotAssemblies>
+    <EnableLLVM>False</EnableLLVM>
+    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
+    <EnableProguard>True</EnableProguard>
+    <DebugSymbols>True</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AndHUD">
+      <HintPath>..\..\Refs\AndHUD-1.3.1\lib\android\AndHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="CalligraphyBindings">
+      <HintPath>..\..\Refs\calligraphyxamarin-2.1\lib\android\CalligraphyBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK">
+      <HintPath>..\..\Refs\hockeyappandroid-4.1.0.2\lib\android\HockeySDK.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK.AndroidBindings">
+      <HintPath>..\..\Refs\hockeyappandroid-4.1.0.2\lib\android\HockeySDK.AndroidBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Parse.Android, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Parse.Android.1.3.1\lib\Parse.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Messaging, Version=3.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Messaging.3.2.1\lib\MonoAndroid10\Plugin.Messaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Messaging.Abstractions, Version=3.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Messaging.3.2.1\lib\MonoAndroid10\Plugin.Messaging.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\MonoAndroid10\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UniversalImageLoader">
+      <HintPath>..\..\Refs\UniversalImageLoader-1.9.4.1\lib\android\UniversalImageLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="UrlImageViewHelper, Version=1.3.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\urlimageviewhelper-1.0.4.1\lib\android\UrlImageViewHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="WizarDroid.NET, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WizarDroid.NET.1.0.0.4\lib\MonoAndroid44\WizarDroid.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\EditProfileActivity.cs" />
+    <Compile Include="Activities\EditVehicleActivity.cs" />
+    <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\CountrySelectionActivity.cs" />
+    <Compile Include="Activities\OwnerProfileActivity.cs" />
+    <Compile Include="Activities\RegisterActivity.cs" />
+    <Compile Include="Activities\SellMyCar.cs" />
+    <Compile Include="Activities\TestActivity.cs" />
+    <Compile Include="Activities\VehicleDetailsActivity.cs" />
+    <Compile Include="Adapters\CustomCheckedTextView.cs" />
+    <Compile Include="Adapters\InventoryListViewAdapter.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="ComponentClasses\FontClass.cs" />
+    <Compile Include="ComponentClasses\GeoLocation.cs" />
+    <Compile Include="ComponentClasses\HelperClass.cs" />
+    <Compile Include="ComponentClasses\HomePageFilterRules.cs" />
+    <Compile Include="ComponentClasses\MessagingComponent.cs" />
+    <Compile Include="ComponentClasses\SocialMediaLinks.cs" />
+    <Compile Include="ComponentClasses\UserProfileData.cs" />
+    <Compile Include="DataAccessLayer\Car.cs" />
+    <Compile Include="DataAccessLayer\CarProfile.cs" />
+    <Compile Include="DataAccessLayer\CarType.cs" />
+    <Compile Include="DataAccessLayer\Conversation.cs" />
+    <Compile Include="DataAccessLayer\DataManager.cs" />
+    <Compile Include="DataAccessLayer\DealerProfile.cs" />
+    <Compile Include="DataAccessLayer\InAppPurchaseManager.cs" />
+    <Compile Include="DataAccessLayer\IParseStorage.cs" />
+    <Compile Include="DataAccessLayer\Message.cs" />
+    <Compile Include="DataAccessLayer\MessageBus.cs" />
+    <Compile Include="DataAccessLayer\MessageInbox.cs" />
+    <Compile Include="DataAccessLayer\MessagesTableViewSource.cs" />
+    <Compile Include="DataAccessLayer\OwnerProfile.cs" />
+    <Compile Include="DataAccessLayer\ParseStorage.cs" />
+    <Compile Include="DataAccessLayer\RequestsInbox.cs" />
+    <Compile Include="DataAccessLayer\RequestTableViewSource.cs" />
+    <Compile Include="DataAccessLayer\Subscription.cs" />
+    <Compile Include="DataAccessLayer\UserInventory.cs" />
+    <Compile Include="DataAccessLayer\UserPendingRequestsSource.cs" />
+    <Compile Include="DataAccessLayer\UserProfile.cs" />
+    <Compile Include="DataAccessLayer\UserRequest.cs" />
+    <Compile Include="DataAccessLayer\UserRequestTableViewSource.cs" />
+    <Compile Include="DataAccessLayer\UserSettings.cs" />
+    <Compile Include="DataAccessLayer\VehicleData.cs" />
+    <Compile Include="DataAccessLayer\VehiclesHomeTable.cs" />
+    <Compile Include="Fragments\HelpFragment.cs" />
+    <Compile Include="Fragments\HomePageFragment.cs" />
+    <Compile Include="Fragments\UserInventoryFragment.cs" />
+    <Compile Include="Fragments\UserProfileFragment.cs" />
+    <Compile Include="Adapters\HomeListViewAdapter.cs" />
+    <Compile Include="Fragments\UserRequestsFragment.cs" />
+    <Compile Include="Fragments\UserSettingsFragment.cs" />
+    <Compile Include="OffLineData\MakeTable.cs" />
+    <Compile Include="OffLineData\MissingImages.cs" />
+    <Compile Include="OffLineData\ModelTable.cs" />
+    <Compile Include="OffLineData\SharedImagesCache.cs" />
+    <Compile Include="OffLineData\SqlLiteDataStore.cs" />
+    <Compile Include="OffLineData\VehicleDataCache.cs" />
+    <Compile Include="OffLineData\VehicleProfile.cs" />
+    <Compile Include="OffLineData\VehicleProfileTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Activities\BaseActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="Wizards\SellMyCarWizard\CarInfoFragment.cs" />
+    <Compile Include="Wizards\SellMyCarWizard\CarImagesFragment.cs" />
+    <Compile Include="Wizards\SellMyCarWizard\SellMyCarWizard.cs" />
+    <Compile Include="Wizards\SignUpWizard\TermsOfService.cs" />
+    <Compile Include="Wizards\SignUpWizard\UserProfileFragment.cs" />
+    <Compile Include="Wizards\SignUpWizard\CountryFragment.cs" />
+    <Compile Include="Wizards\SignUpWizard\AccountTypeFragment.cs" />
+    <Compile Include="Wizards\SignUpWizard\SignUpWizard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\TOS.pdf" />
+    <AndroidAsset Include="Assets\fonts\SudegnakNo2.ttf" />
+    <None Include="app.config" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="Assets\fonts\bgothm.ttf" />
+    <AndroidAsset Include="Assets\fonts\bgothl.ttf" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\layout\profile_edit.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\vehicle_details_edit.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <ProguardConfiguration Include="proguard.cfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Transparency codes.txt" />
+    <AndroidAsset Include="Assets\TOS.txt" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_instagram.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_linkedin.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_twitter.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\lt_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\message.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_off_disabled_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_off_disabled_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_off_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_off_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_off_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_on_disabled_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_on_disabled_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_on_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_on_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\mytheme_btn_check_on_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\request.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\sell.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\uk_flag.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\us_flag.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_home_1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_home_2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_instagram.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_linkedin.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_twitter.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\lt_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_off_disabled_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_off_disabled_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_off_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_off_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_off_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_on_disabled_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_on_disabled_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_on_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_on_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\mytheme_btn_check_on_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_home_1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_home_2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_instagram.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_linkedin.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_twitter.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\lt_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_off_disabled_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_off_disabled_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_off_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_off_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_off_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_on_disabled_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_on_disabled_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_on_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_on_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\mytheme_btn_check_on_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_home_1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_home_2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_instagram.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_linkedin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_twitter.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\lt_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_off_disabled_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_off_disabled_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_off_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_off_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_off_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_on_disabled_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_on_disabled_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_on_focused_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_on_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\mytheme_btn_check_on_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_instagram.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_linkedin.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_twitter.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\lt_icon.png" />
+    <AndroidResource Include="Resources\layout\account_type.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\car_listing.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CountrySelection.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\custom_spinner.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\dealer_signup.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\help_fragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\homepage_fragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\image_picker.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\image_scrollview.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\inventory_fragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\list_item_row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Login.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\main.axml" />
+    <AndroidResource Include="Resources\layout\nav_header.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\profile_view.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RequestsFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\sell_my_car.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SettingsFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\terms_of_service.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\test_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\toolbar.axml" />
+    <AndroidResource Include="Resources\layout\user_signup.axml" />
+    <AndroidResource Include="Resources\layout\vehicle_details.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\wizardform.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\menu\bottombar_menu.xml" />
+    <AndroidResource Include="Resources\menu\nav_menu.xml" />
+    <AndroidResource Include="Resources\values\arrays.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\integers.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <Content Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_icon_edit.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_icon_edit.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_icon_edit.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_icon_edit.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_icon_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\car_placeholder.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gradient_image.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_home_1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_home_2.png" />
+    <AndroidResource Include="Resources\drawable\checkbox_theme.xml" />
+    <AndroidResource Include="Resources\drawable\color_cursor.xml" />
+    <AndroidResource Include="Resources\drawable\gradient_shape.xml" />
+    <AndroidResource Include="Resources\drawable\icon_profile.png" />
+    <AndroidResource Include="Resources\drawable\icon_user_profile.png" />
+    <AndroidResource Include="Resources\drawable\main_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="AndHUD">
+      <Visible>False</Visible>
+      <Version>1.3.1</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="hockeyappandroid">
+      <Visible>False</Visible>
+      <Version>4.1.0.2</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="UniversalImageLoader">
+      <Visible>False</Visible>
+      <Version>1.9.4.1</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="urlimageviewhelper">
+      <Visible>False</Visible>
+      <Version>1.0.4.1</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

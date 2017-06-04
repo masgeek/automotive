@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--Get colors from: http://www.materialpalette.com/-->
+  <color name="appBackground">#000000</color>
+  <color name="primary">#000000</color>
+  <color name="colorPrimaryDark">#c2185b</color>
+  <color name="colorPrimary">#ff5722</color>
+  <color name="primaryDark">#0288D1</color>
+  <color name="inputColor">#FBFFFB</color>
+  <color name="accent">#FFC107</color>
+  <color name="lightPrimary">#B3E5FC</color>
+  <color name="textIcon">#FFFFFF</color>
+  <color name="primaryText">#212121</color>
+  <color name="secondaryText">#727272</color>
+  <color name="divider">#B6B6B6</color>
+  <color name="activated_color">#E8E8E8</color>
+  <color name="white">#FFFFFF</color>
+  <color name="transparent">#A6000000</color>
+  <color name="fullyTransparent">#00000000</color>
+  <color name="colorAccent">#011f10</color>
+  <color name="cursorColor">#FF4081</color>
+
+  <color name="ltyellow">#FBB917</color>
+  <color name="labelColor">#bcbcbc</color>
+  <color name="textColor">#ffffff</color>
+
+  <!-- floating button colors -->
+  <color name="primary_pressed">#2C3E50</color>
+  <color name="ripple">#80ffd5</color>
+  <color name="accent_pressed">#BF360C</color>
+</resources>

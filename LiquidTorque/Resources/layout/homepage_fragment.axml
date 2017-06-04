@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+  <android.support.v4.widget.SwipeRefreshLayout xmlns:SwipeRefreshLayout="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/refresher"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1">
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vehicleListView"
+        android:cacheColorHint="@color/accent_pressed" />
+  </android.support.v4.widget.SwipeRefreshLayout>
+  <!--Bottom bar layout below-->
+  <LinearLayout
+      android:orientation="horizontal"
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/bottomBar"
+      android:layout_weight="0">
+    <!--...Put your bottom bar content here...-->
+    <Button
+        android:text="REQUEST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:id="@+id/btnRequest"
+        android:padding="5dp"
+        android:drawableTop="@drawable/request"
+        android:textColor="@color/white"
+        android:background="@color/transparent" />
+    <Button
+        android:text="MESSAGES"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:id="@+id/btnMessage"
+        android:padding="5dp"
+        android:drawableTop="@drawable/message"
+        android:textColor="@color/white"
+        android:background="@color/transparent" />
+    <Button
+        android:text="SELL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:id="@+id/btnSell"
+        android:padding="5dp"
+        android:drawableTop="@drawable/sell"
+        android:textColor="@color/white"
+        android:background="@color/transparent" />
+  </LinearLayout>
+</LinearLayout>

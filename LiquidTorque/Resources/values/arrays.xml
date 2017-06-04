@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!--These two sections should match in length
+  more icons from:  http://romannurik.github.io/AndroidAssetStudio/-->
+  <string-array name="sections">
+    <item>Fragment 1</item>
+    <item>Fragment 2</item>
+  </string-array>
+  <string-array name="sections_icons">
+    <item>@drawable/ic_home_1</item>
+    <item>@drawable/ic_home_2</item>
+  </string-array>
+
+  <string-array name="account_array">
+    <item>Specify Account Type</item>
+    <item>Private Party</item>
+    <item>Dealer</item>
+  </string-array>
+
+  <!--MAKE-->
+  <string-array name="make">
+    <item>AUDI</item>
+  </string-array>
+
+  <!--MODEL-->
+  <string-array name="model">
+    <item>C7 RS6 AVANT</item>
+  </string-array>
+
+  <!--DISTANCE-->
+  <string-array name="distance">
+    <item>Select Distance type</item>
+    <item>MILES</item>
+    <item>KILOMETERS</item>
+  </string-array>
+
+  <!--Drivetrain-->
+  <string-array name="drivetrain">
+    <item>Select Drivetrain</item>
+    <item>RWD</item>
+    <item>AWD</item>
+    <item>4WD</item>
+  </string-array>
+
+  <!--Engine-->
+  <string-array name="engine">
+    <item>Select Engine</item>
+    <item>4 CYLINDERS</item>
+    <item>5 CYLINDERS</item>
+    <item>6 CYLINDERS</item>
+    <item>8 CYLINDERS</item>
+    <item>10 CYLINDERS</item>
+    <item>12 CYLINDERS</item>
+    <item>16 CYLINDERS</item>
+  </string-array>
+
+  <!--transmission-->
+  <string-array name="transmission">
+    <item>Select Transmission</item>
+    <item>MANUAL</item>
+    <item>AUTO</item>
+    <item>SEQUENTIAL</item>
+    <item>CVT</item>
+    <item>F1</item>
+    <item>E-GEAR</item>
+  </string-array>
+
+  <!-- CAR TYPE -->
+  <string-array name="car_type">
+    <item>Select car type</item>
+    <item>SEDAN</item>
+    <item>COUPE</item>
+    <item>CONVERTIBLE</item>
+  </string-array>
+
+  <!--EXTERIOR COLORS -->
+
+  <string-array name="car_color">
+    <item>Select color</item>
+    <item>BEIGE</item>
+    <item>BLACK</item>
+    <item>BLUE</item>
+    <item>BRONZE</item>
+    <item>BROWN</item>
+    <item>BURGUNDY</item>
+    <item>CREAM</item>
+    <item>GOLD</item>
+    <item>GREEN</item>
+    <item>GREY</item>
+    <item>ORANGE</item>
+    <item>PURPLE</item>
+    <item>RED</item>
+    <item>SILVER</item>
+    <item>WHITE</item>
+    <item>YELLOW</item>
+    <item>OTHER</item>
+  </string-array>
+
+  <!-- year -->
+  <string-array name="year">
+    <item>2016</item>
+    <item>2015</item>
+    <item>2014</item>
+  </string-array>
+</resources>

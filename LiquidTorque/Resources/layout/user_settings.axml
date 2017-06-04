@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+  <!-- Scrollable Item below header and above footer -->
+  <ScrollView
+      android:id="@+id/scrollableContents"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+      <TextView
+          android:text="@string/social"
+          android:layout_marginTop="10dip"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/labelColor" />
+      <!-- Editing fields-->
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/editFacebook"
+          android:layout_marginTop="10dip"
+          android:hint="@string/facebook"
+          android:textCursorDrawable="@drawable/color_cursor"
+          android:drawableLeft="@drawable/ic_facebook"
+          android:background="@color/inputColor"
+          android:textColor="@color/ltyellow"
+          android:inputType="textPersonName"/>
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/editInstagram"
+          android:layout_marginTop="30dip"
+          android:hint="@string/instagram"
+          android:textCursorDrawable="@drawable/color_cursor"
+          android:drawableLeft="@drawable/ic_instagram"
+          android:background="@color/inputColor"
+          android:textColor="@color/ltyellow"
+          android:inputType="textPersonName"/>
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/editTwitter"
+          android:layout_marginTop="30dip"
+          android:hint="@string/twitter"
+          android:textCursorDrawable="@drawable/color_cursor"
+          android:drawableLeft="@drawable/ic_twitter"
+          android:background="@color/inputColor"
+          android:textColor="@color/ltyellow"
+          android:inputType="textPersonName"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:padding="5dp"
+          android:id="@+id/editLinkedin"
+          android:layout_marginTop="30dip"
+          android:hint="@string/linkedin"
+          android:textCursorDrawable="@drawable/color_cursor"
+          android:drawableLeft="@drawable/ic_linkedin"
+          android:background="@color/inputColor"
+          android:textColor="@color/ltyellow"
+          android:inputType="textPersonName"/>
+
+      <!-- End of editing fields -->
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dip"
+
+          android:text="Save"
+          android:id="@+id/btnUpdateSettings"
+          android:layout_gravity="center_horizontal" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:text="@string/app_name"
+          android:id="@+id/versionNumber"
+          android:textColor="@color/ltyellow"
+          android:gravity="center"
+          android:padding="10dp"
+          android:layout_marginTop="10dp" />
+    </LinearLayout>
+  </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+  <!-- Scrollable Item below header and above footer -->
+  <ScrollView
+      android:id="@+id/scrollableContents"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+      <!-- image view  -->
+      <!--
+            <ImageView
+                android:id="@+id/MainImageView"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:src="@drawable/car_placeholder"
+                android:background="@color/fullyTransparent" />
+            <View
+                android:id="@+id/line_splitter"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/cursorColor" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_below="@id/line_splitter"
+                android:background="@color/fullyTransparent">
+                <LinearLayout
+                    android:id="@+id/thumbnails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp" />
+            </HorizontalScrollView>
+            -->
+      <!-- end of image view -->
+      <!-- Editing fields-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:orientation="vertical">
+        <TextView
+            android:text="Make"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/labelColor" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/make_spinner"
+            android:spinnerMode="dialog"
+            android:prompt="@string/make_prompt" />
+        <TextView
+            android:text="Model"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/labelColor" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/model_spinner"
+            android:spinnerMode="dialog"
+            android:prompt="@string/model_prompt" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:id="@+id/editModelVariation"
+            android:layout_marginTop="10dip"
+            android:hint="Model Variation"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@color/inputColor" />
+        <TextView
+            android:text="Year"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/labelColor" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/year_spinner"
+            android:spinnerMode="dialog"
+            android:entries="@array/year" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:id="@+id/editMileage"
+            android:layout_marginTop="10dip"
+            android:hint="Mileage"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@color/inputColor" />
+        <TextView
+            android:text="Distance Units"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/labelColor" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/distance_spinner"
+            android:spinnerMode="dialog"
+            android:entries="@array/distance" />
+        <TextView
+            android:text="Engine"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/labelColor" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/engine_spinner"
+            android:spinnerMode="dialog"
+            android:entries="@array/engine" />
+        <TextView
+            android:text="DriveTrain"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/labelColor" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/drivetrain_spinner"
+            android:spinnerMode="dialog"
+            android:entries="@array/drivetrain" />
+        <TextView
+            android:text="Transmission"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/labelColor" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/transmission_spinner"
+            android:spinnerMode="dialog"
+            android:entries="@array/transmission" />
+        <TextView
+            android:text="Car Type"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primaryDark" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/cartype_spinner"
+            android:spinnerMode="dialog"
+            android:entries="@array/car_type" />
+        <TextView
+            android:text="Exterior Color"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primaryDark" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/extclor_spinner"
+            android:spinnerMode="dialog"
+            android:entries="@array/car_color" />
+        <TextView
+            android:text="Interior Color"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/labelColor" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:background="@color/inputColor"
+            android:id="@+id/intcolor_spinner"
+            android:spinnerMode="dialog"
+            android:entries="@array/car_color" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:id="@+id/editVin"
+            android:layout_marginTop="10dip"
+            android:hint="VIN"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@color/inputColor" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:id="@+id/editStockNo"
+            android:layout_marginTop="10dip"
+            android:hint="Stock No."
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@color/inputColor" />
+        <!-- VAT and POR checkboxes -->
+        <CheckBox
+            android:text="@string/vat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkVat"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox_theme" />
+        <CheckBox
+            android:text="@string/por"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkPor"
+            android:layout_below="@id/chkVat"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox_theme" />
+        <!-- end of VAT and POR checkboxes -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:id="@+id/editListPrice"
+            android:layout_marginTop="10dip"
+            android:hint="List Price"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@color/inputColor" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:inputType="textMultiLine"
+            android:id="@+id/editDescription"
+            android:layout_marginTop="10dip"
+            android:hint="Add a description here"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@color/inputColor" />
+      </LinearLayout>
+      <!-- End of editing fields -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/btnUpdateVehicle"
+            android:layout_gravity="center_horizontal" />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+</RelativeLayout>

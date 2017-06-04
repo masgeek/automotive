@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/filteroptions"
+        android:id="@+id/filterOptionsHeader"
+        android:layout_above="@+id/linearLayout"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/make_prompt"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:id="@+id/make_spinner" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:spinnerMode="dialog"
+        android:background="@color/inputColor"
+        android:padding="5dp"
+        android:prompt="@string/make_prompt"
+        android:id="@+id/makeSpinner"/>
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Search Model"
+        android:textColorHint="@color/labelColor"
+        android:textColor="@color/ltyellow"
+        android:background="@color/inputColor"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/modelSearchText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/year_prompt"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:id="@+id/year_prompt" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown"
+        android:background="@color/inputColor"
+        android:padding="5dp"
+        android:prompt="@string/year_prompt"
+        android:id="@+id/yearSpinner" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:id="@+id/bottomBar"
+            android:layout_weight="0">
+            <!--...Put your bottom bar content here...-->
+            <Button
+                android:text="Cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:id="@+id/cancelFilter"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/ltyellow"/>
+            <Button
+                android:text="Reset Filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:id="@+id/resetFilter"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/ltyellow"/>
+            <Button
+                android:text="Apply Filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:id="@+id/applyFilter"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/ltyellow"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

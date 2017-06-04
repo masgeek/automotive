@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+<!--
+        <Button
+            android:id="@+id/btnPrivateParty"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:text="PRIVATE PARTY"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dip"
+            android:layout_marginBottom="30dip"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnDealer"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:text="DEALER"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btnPrivateParty"
+            android:layout_marginTop="30dip"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+      -->
+    <ToggleButton
+        android:id="@+id/togglePrivate"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="150dip"
+        android:layout_marginBottom="30dip"
+        android:textOn="Private Party"
+        android:textOff="Private Party"
+        android:background="@drawable/toggle_selector"
+        android:textColor="@color/white" />
+    <ToggleButton
+        android:id="@+id/toggleDealer"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/togglePrivate"
+        android:textSize="18sp"
+        android:layout_marginTop="30dip"
+        android:textOn="Dealer"
+        android:textOff="Dealer"
+        android:background="@drawable/toggle_selector"
+        android:textColor="@color/white" />
+</RelativeLayout>

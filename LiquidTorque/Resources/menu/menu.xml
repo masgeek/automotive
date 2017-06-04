@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	  xmlns:local="http://schemas.android.com/apk/res-auto">
+  <item
+     android:id="@+id/menu_search"
+     android:icon="@drawable/ic_search"
+     local:showAsAction="ifRoom"
+     android:title="Search Vehicles"/>
+  <item
+       android:id="@+id/menu_edit"
+       android:icon="@drawable/ic_icon_edit"
+       local:showAsAction="ifRoom"
+       android:title="Edit Profile"
+       android:visibility="gone"/>
+  <item
+     android:id="@+id/menu_add_request"
+     android:icon="@drawable/ic_new_request"
+     local:showAsAction="ifRoom"
+     android:title="New Request"
+     android:visibility="gone"/>
+  <!--<item
+       android:id="@+id/menu_settings"
+       local:showAsAction="never"
+       android:title="Settings" />
+       -->
+</menu>
